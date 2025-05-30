@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/RR-1.jpeg'; // Import the logo
 
 const Header: React.FC = () => {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
@@ -43,7 +44,7 @@ const Header: React.FC = () => {
             {/* Logo and Title */}
             <div className="flex items-center space-x-3">
               <img
-                src="src/components/RR logo.img/RR 1.jpeg"
+                src={logo} // Use the imported logo
                 alt="RR Developers Logo"
                 className="h-10 w-10 object-contain rounded-full border border-blue-975"
               />
