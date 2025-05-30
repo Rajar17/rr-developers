@@ -17,7 +17,7 @@ const AboutUs: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/5816294/pexels-photo-5816294.jpeg" 
+              src="https://images.pexels.com/photos/4491459/pexels-photo-4491459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
               alt="RR Developers Team" 
               className="rounded-lg shadow-xl"
             />
