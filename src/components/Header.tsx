@@ -4,7 +4,7 @@ import logo from '../assets/RR-1.jpeg';
 const Header: React.FC = () => {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for hamburger menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 py-3">
           {/* Contact Information (Top Row) */}
           <div className="flex justify-end mb-2">
-            <div className="flex space-x-4 text-sm text-gray-600">
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-1 md:space-y-0 text-xs md:text-sm text-gray-600 text-right">
               <span>📞 +91-9100677906</span>
               <span>✉️ rrdevelopers23@gmail.com</span>
               <span>📍 Rajahmundry, Andhra Pradesh</span>
