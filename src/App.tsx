@@ -10,7 +10,20 @@ import { useEffect } from 'react';
      import ContactUs from './components/ContactUs';
      import Footer from './components/Footer';
      import PropertyDetails from './components/PropertyDetails';
-     import AllProperties from './components/AllProperties'; // Import the new component
+     import AllProperties from './components/AllProperties';
+     import OpenSites from './components/OpenSites';
+     import Villas from './components/Villas';
+     import IndividualHouses from './components/IndividualHouses';
+     import TwoBHK from './components/TwoBHK';
+     import ThreeBHK from './components/ThreeBHK';
+     import DuplexHouses from './components/DuplexHouses';
+     import DuplexVillas from './components/DuplexVillas';
+     import CompanyProfileBrochure from './components/CompanyProfileBrochure';
+     import JettyMayfairBrochure from './components/JettyMayfairBrochure';
+     import OpenPlotsBrochure from './components/OpenPlotsBrochure';
+     import VillasIndividualHousesBrochure from './components/VillasIndividualHousesBrochure';
+     import TwoThreeBHKBrochure from './components/TwoThreeBHKBrochure';
+     import DuplexBrochure from './components/DuplexBrochure';
      import { AuthProvider } from './contexts/AuthContext';
 
      function App() {
@@ -67,6 +80,19 @@ import { useEffect } from 'react';
                    />
                    <Route path="/property/:id" element={<PropertyDetails />} />
                    <Route path="/all-properties" element={<AllProperties />} />
+                   <Route path="/open-sites" element={<OpenSites />} />
+                   <Route path="/villas" element={<Villas />} />
+                   <Route path="/individual-houses" element={<IndividualHouses />} />
+                   <Route path="/2bhk" element={<TwoBHK />} />
+                   <Route path="/3bhk" element={<ThreeBHK />} />
+                   <Route path="/duplex-houses" element={<DuplexHouses />} />
+                   <Route path="/duplex-villas" element={<DuplexVillas />} />
+                   <Route path="/brochures/company-profile" element={<CompanyProfileBrochure />} />
+                   <Route path="/brochures/jetty-mayfair" element={<JettyMayfairBrochure />} />
+                   <Route path="/brochures/open-plots" element={<OpenPlotsBrochure />} />
+                   <Route path="/brochures/villas-individual-houses" element={<VillasIndividualHousesBrochure />} />
+                   <Route path="/brochures/2bhk-3bhk" element={<TwoThreeBHKBrochure />} />
+                   <Route path="/brochures/duplex" element={<DuplexBrochure />} />
                  </Routes>
                  <Toaster position="top-right" />
                </main>
