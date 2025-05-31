@@ -1,276 +1,132 @@
 import { Property, Brochure } from '../types';
 
-     export const COMPANY_INFO = {
-       location: 'Lalacheruvu, Rajahmundry, Andhra Pradesh',
-       phone: '+91 9100677906',
-       email: 'rrdevelopers23@gmail.com', // Fixed typo: 'rrdeveopers23' to 'rrdevelopers23'
-       yearEstablished: '2010',
-     };
+export const COMPANY_INFO = {
+  location: 'Lalacheruvu, Rajahmundry, Andhra Pradesh',
+  phone: '+91 9100677906',
+  email: 'rrdeveopers23@gmail.com',
+  yearEstablished: '2010',
+};
 
-     export const PROPERTIES: Property[] = [
-       {
-         id: '1',
-         title: 'Premium Open Plot',
-         type: 'Open Site',
-         price: 13500, // per sq yard
-         area: 183,
-         areaUnit: 'sq.yrds',
-         location: 'Bommuru, Rajahmundry',
-         facing: 'East',
-         description: 'Prime location open plot with excellent connectivity and all amenities nearby.',
-         features: ['Corner Plot', 'Gated Community', '24/7 Security', 'All Utilities Available'],
-         amenities: ['Street Lighting', 'Underground Drainage', 'Paved Roads'],
-         parking: 'Public Parking Nearby',
-         proximity: {
-           hospitals: '2 km to Apollo Hospital',
-           restaurants: '1 km to Local Dining Hubs',
-           parks: '0.5 km to Central Park',
-           airport: '15 km to Rajahmundry Airport',
-           busStand: '3 km to Rajahmundry Bus Stand',
-           railwayStation: '4 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-         isFeatured: true,
-       },
-       {
-         id: '2',
-         title: 'Luxury Villa',
-         type: 'Villa',
-         price: 9500000,
-         area: 2400,
-         areaUnit: 'sq.ft',
-         location: 'Diwancheruvu, Rajahmundry',
-         facing: 'East',
-         description: 'Spacious 3BHK villa with modern amenities and elegant design.',
-         features: ['3 Bedrooms', '3 Bathrooms', 'Modular Kitchen', 'Garden Area', 'Car Parking'],
-         amenities: ['Swimming Pool', 'Gymnasium', 'Clubhouse', 'Children’s Play Area'],
-         parking: 'Dedicated Parking for 2 Cars',
-         proximity: {
-           hospitals: '3 km to GSL Medical College',
-           restaurants: '2 km to Fine Dining Restaurants',
-           parks: '1 km to Riverside Park',
-           airport: '14 km to Rajahmundry Airport',
-           busStand: '4 km to Rajahmundry Bus Stand',
-           railwayStation: '5 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-         isFeatured: true,
-       },
-       {
-         id: '3',
-         title: 'Independent House',
-         type: 'Individual House',
-         price: 5500000,
-         area: 1800,
-         areaUnit: 'sq.ft',
-         location: 'Gadala, Rajahmundry',
-         facing: 'West',
-         description: 'Beautiful individual house with spacious rooms and modern facilities.',
-         features: ['2 Bedrooms', '2 Bathrooms', 'Hall', 'Kitchen', 'Car Parking'],
-         amenities: ['Garden Space', 'Terrace', 'Solar Water Heater'],
-         parking: 'Dedicated Parking for 1 Car',
-         proximity: {
-           hospitals: '2.5 km to Swatantra Hospital',
-           restaurants: '1.5 km to Local Eateries',
-           parks: '0.8 km to Community Park',
-           airport: '16 km to Rajahmundry Airport',
-           busStand: '3.5 km to Rajahmundry Bus Stand',
-           railwayStation: '4.5 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '4',
-         title: 'North Facing Plot',
-         type: 'Open Site',
-         price: 13500,
-         area: 183,
-         areaUnit: 'sq.yrds',
-         location: 'Lalacheruvu, Rajahmundry',
-         facing: 'North',
-         description: 'Vastu compliant north facing plot in a prime location.',
-         features: ['Vastu Compliant', 'Good Neighborhood', 'Near to Schools', 'Easy Access'],
-         amenities: ['Street Lighting', 'Underground Drainage', 'Paved Roads'],
-         parking: 'Public Parking Nearby',
-         proximity: {
-           hospitals: '1.5 km to Apollo Hospital',
-           restaurants: '1 km to Local Dining Hubs',
-           parks: '0.3 km to Lalacheruvu Park',
-           airport: '15 km to Rajahmundry Airport',
-           busStand: '2.5 km to Rajahmundry Bus Stand',
-           railwayStation: '3.5 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '5',
-         title: 'Spacious 3BHK',
-         type: '3BHK',
-         price: 8500000,
-         area: 2200,
-         areaUnit: 'sq.ft',
-         location: 'Lalacheruvu, Rajahmundry',
-         description: 'Modern 3BHK apartment with luxury amenities.',
-         features: ['3 Bedrooms', '3 Bathrooms', 'Balcony', 'Modular Kitchen', 'Club House Access'],
-         amenities: ['Swimming Pool', 'Gymnasium', 'Community Hall', 'Lift'],
-         parking: 'Dedicated Parking for 1 Car',
-         proximity: {
-           hospitals: '1.5 km to Apollo Hospital',
-           restaurants: '1 km to Local Dining Hubs',
-           parks: '0.3 km to Lalacheruvu Park',
-           airport: '15 km to Rajahmundry Airport',
-           busStand: '2.5 km to Rajahmundry Bus Stand',
-           railwayStation: '3.5 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '6',
-         title: 'Compact 2BHK',
-         type: '2BHK',
-         price: 6500000,
-         area: 1500,
-         areaUnit: 'sq.ft',
-         location: 'Rajanagaram, Rajahmundry',
-         description: 'Well-designed 2BHK apartment perfect for small families.',
-         features: ['2 Bedrooms', '2 Bathrooms', 'Balcony', 'Modern Kitchen'],
-         amenities: ['Community Hall', 'Lift', 'Security'],
-         parking: 'Dedicated Parking for 1 Car',
-         proximity: {
-           hospitals: '4 km to Government Hospital',
-           restaurants: '2 km to Local Eateries',
-           parks: '1 km to Rajanagaram Park',
-           airport: '18 km to Rajahmundry Airport',
-           busStand: '5 km to Rajahmundry Bus Stand',
-           railwayStation: '6 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '7',
-         title: 'Duplex House',
-         type: 'Duplex House',
-         price: 7500000,
-         area: 2000,
-         areaUnit: 'sq.ft',
-         location: 'Bommuru, Rajahmundry',
-         facing: 'North-East',
-         description: 'Modern duplex house with spacious interiors and premium features.',
-         features: ['3 Bedrooms', '3 Bathrooms', 'Terrace', 'Modular Kitchen', 'Car Parking'],
-         amenities: ['Garden Space', 'Solar Water Heater', 'Security'],
-         parking: 'Dedicated Parking for 2 Cars',
-         proximity: {
-           hospitals: '2 km to Apollo Hospital',
-           restaurants: '1 km to Local Dining Hubs',
-           parks: '0.5 km to Central Park',
-           airport: '15 km to Rajahmundry Airport',
-           busStand: '3 km to Rajahmundry Bus Stand',
-           railwayStation: '4 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '8',
-         title: 'Luxury Duplex Villa',
-         type: 'Duplex Villa',
-         price: 10000000,
-         area: 3000,
-         areaUnit: 'sq.ft',
-         location: 'Diwancheruvu, Rajahmundry',
-         facing: 'East',
-         description: 'Luxury duplex villa with premium amenities and expansive living spaces.',
-         features: ['4 Bedrooms', '4 Bathrooms', 'Private Garden', 'Home Theater', 'Car Parking'],
-         amenities: ['Swimming Pool', 'Gymnasium', 'Clubhouse', 'Security', 'Smart Home Features'],
-         parking: 'Dedicated Parking for 3 Cars',
-         proximity: {
-           hospitals: '3 km to GSL Medical College',
-           restaurants: '2 km to Fine Dining Restaurants',
-           parks: '1 km to Riverside Park',
-           airport: '14 km to Rajahmundry Airport',
-           busStand: '4 km to Rajahmundry Bus Stand',
-           railwayStation: '5 km to Rajahmundry Railway Station',
-         },
-         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-         isFeatured: true,
-       },
-     ];
+export const PROPERTIES: Property[] = [
+  {
+    id: '1',
+    title: 'Premium Open Plot',
+    type: 'Open Site',
+    price: 13500, // per sq yard
+    area: 183,
+    areaUnit: 'sq.yrds',
+    location: 'Bommuru, Rajahmundry',
+    facing: 'East',
+    description: 'Prime location open plot with excellent connectivity and all amenities nearby.',
+    features: ['Corner Plot', 'Gated Community', '24/7 Security', 'All Utilities Available'],
+    image: 'https://images.pexels.com/photos/6775268/pexels-photo-6775268.jpeg',
+    isFeatured: true,
+  },
+  {
+    id: '2',
+    title: 'Luxury Villa',
+    type: 'Villa',
+    price: 9500000,
+    area: 2400,
+    areaUnit: 'sq.ft',
+    location: 'Diwancheruvu, Rajahmundry',
+    facing: 'East',
+    description: 'Spacious 3BHK villa with modern amenities and elegant design.',
+    features: ['3 Bedrooms', '3 Bathrooms', 'Modular Kitchen', 'Garden Area', 'Car Parking'],
+    image: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg',
+    isFeatured: true,
+  },
+  {
+    id: '3',
+    title: 'Independent House',
+    type: 'Individual House',
+    price: 5500000,
+    area: 1800,
+    areaUnit: 'sq.ft',
+    location: 'Gadala, Rajahmundry',
+    facing: 'West',
+    description: 'Beautiful individual house with spacious rooms and modern facilities.',
+    features: ['2 Bedrooms', '2 Bathrooms', 'Hall', 'Kitchen', 'Car Parking'],
+    image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg',
+  },
+  {
+    id: '4',
+    title: 'North Facing Plot',
+    type: 'Open Site',
+    price: 13500,
+    area: 183,
+    areaUnit: 'sq.yrds',
+    location: 'Lalacheruvu, Rajahmundry',
+    facing: 'North',
+    description: 'Vastu compliant north facing plot in a prime location.',
+    features: ['Vastu Compliant', 'Good Neighborhood', 'Near to Schools', 'Easy Access'],
+    image: 'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg',
+  },
+  {
+    id: '5',
+    title: 'Spacious 3BHK',
+    type: '3BHK',
+    price: 8500000,
+    area: 2200,
+    areaUnit: 'sq.ft',
+    location: 'Lalacheruvu, Rajahmundry',
+    description: 'Modern 3BHK apartment with luxury amenities.',
+    features: ['3 Bedrooms', '3 Bathrooms', 'Balcony', 'Modular Kitchen', 'Club House Access'],
+    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg',
+  },
+  {
+    id: '6',
+    title: 'Compact 2BHK',
+    type: '2BHK',
+    price: 6500000,
+    area: 1500,
+    areaUnit: 'sq.ft',
+    location: 'Rajanagaram, Rajahmundry',
+    description: 'Well-designed 2BHK apartment perfect for small families.',
+    features: ['2 Bedrooms', '2 Bathrooms', 'Balcony', 'Modern Kitchen'],
+    image: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg',
+  },
+];
 
-     export const FEATURED_PROJECT = {
-       title: 'Jetty Mayfair',
-       subtitle: 'Luxury Living Near Rajamahendravaram',
-       description:
-         'Experience luxury living at its finest with our new project - Jetty Mayfair. Promoted by RR Developers, this premium residential development offers the best of modern amenities and elegant living spaces.',
-       features: [
-         'Premium Location',
-         'World-class Amenities',
-         'Modern Architecture',
-         'Green Spaces',
-         'Secure Community',
-         'Smart Home Features',
-       ],
-       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       logo: 'https://images.unsplash.com/photo-1628592101752-6db6e8b240e5?q=80&w=2070&auto=format&fit=crop', // Placeholder logo
-       facing: 'East-facing',
-       amenities: [
-         'Swimming Pool',
-         'Gymnasium',
-         'Clubhouse',
-         'Children’s Play Area',
-         'Jogging Track',
-         'Community Hall',
-       ],
-       parking: 'Dedicated Parking for 2-3 Cars per Unit',
-       proximity: {
-         hospitals: '3 km to GSL Medical College',
-         restaurants: '2 km to Fine Dining Restaurants',
-         parks: '1 km to Riverside Park',
-         airport: '14 km to Rajahmundry Airport',
-         busStand: '4 km to Rajahmundry Bus Stand',
-         railwayStation: '5 km to Rajahmundry Railway Station',
-       },
-       images: {
-         amenities: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // Placeholder for amenities
-         parking: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // Placeholder for parking
-         hospital: 'https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=2070&auto=format&fit=crop', // Placeholder for hospital
-         park: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // Placeholder for park
-       },
-     };
+export const FEATURED_PROJECT = {
+  title: 'Jetty Mayfair',
+  subtitle: 'Luxury Living Near Rajamahendravaram',
+  description: 'Experience luxury living at its finest with our new project - Jetty Mayfair. Promoted by Sreemaan Properties, The Golden Empire, this premium residential development offers the best of modern amenities and elegant living spaces.',
+  features: [
+    'Premium Location',
+    'World-class Amenities',
+    'Modern Architecture',
+    'Green Spaces',
+    'Secure Community',
+    'Smart Home Features'
+  ],
+  image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg',
+  logo: 'https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg',
+};
 
-     export const BROCHURES: Brochure[] = [
-       {
-         id: '1',
-         title: 'RR Developers Company Profile',
-         description: 'Learn about our company history, vision, and achievements',
-         thumbnail: 'https://images.unsplash.com/photo-2884866?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '2',
-         title: 'Jetty Mayfair Brochure',
-         description: 'Detailed information about our premium Jetty Mayfair project',
-         thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '3',
-         title: 'Open Plots Catalog',
-         description: 'Browse our available open plots with pricing details',
-         thumbnail: 'https://images.unsplash.com/photo-7031607?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '4',
-         title: 'Villas and Individual Houses',
-         description: 'Explore our collection of luxury villas and individual houses',
-         thumbnail: 'https://images.unsplash.com/photo-1732414?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '5',
-         title: '2BHK and 3BHK Apartments',
-         description: 'Discover our range of modern 2BHK and 3BHK apartments',
-         thumbnail: 'https://images.unsplash.com/photo-1571460?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-       {
-         id: '6',
-         title: 'Duplex Houses and Villas',
-         description: 'Explore our duplex houses and luxury duplex villas',
-         thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop', // HD placeholder
-       },
-     ];
+export const BROCHURES: Brochure[] = [
+  {
+    id: '1',
+    title: 'RR Developers Company Profile',
+    description: 'Learn about our company history, vision, and achievements',
+    thumbnail: 'https://images.pexels.com/photos/2884866/pexels-photo-2884866.jpeg',
+  },
+  {
+    id: '2',
+    title: 'Jetty Mayfair Brochure',
+    description: 'Detailed information about our premium Jetty Mayfair project',
+    thumbnail: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg',
+  },
+  {
+    id: '3',
+    title: 'Open Plots Catalog',
+    description: 'Browse our available open plots with pricing details',
+    thumbnail: 'https://images.pexels.com/photos/7031607/pexels-photo-7031607.jpeg',
+  },
+  {
+    id: '4',
+    title: 'Villas and Individual Houses',
+    description: 'Explore our collection of luxury villas and individual houses',
+    thumbnail: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg',
+  },
+];
