@@ -26,7 +26,7 @@ function App() {
       if (!targetElement) return;
 
       window.scrollTo({
-        top: targetElement.getBoundingClientRect().top + window.scrollY - 80,
+        top: targetElement.getBoundingClientRect().top + window.scrollY - 100, // Adjusted for header height
         behavior: 'smooth',
       });
     };
@@ -54,36 +54,38 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 pt-16">
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
           <Header />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <section className="text-center mt-4 mb-16 animate-fadeIn">
-                    <h1 className="text-5xl font-serif mb-4"></h1>
-                    <p className="text-xl font-sans mb-6 max-w-2xl mx-auto"></p>
-                    <button
-                      className="mx-auto text-white px-8 py-3 rounded-lg font-sans transition-colors"
-                      onClick={showToast}
-                    >
-                      Get Started
-                    </button>
-                  </section>
-                  <Hero />
-                  <AboutUs />
-                  <Properties />
-                  <FeaturedProject />
-                  <Brochures />
-                  <ContactUs />
-                  <Footer />
-                </>
-              }
-            />
-            <Route path="/property/:id" element={<PropertyDetails />} />
-          </Routes>
-          <Toaster position="top-right" />
+          <main className="pt-[100px] md:pt-[80px]">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <section className="text-center mt-4 mb-16 animate-fadeIn">
+                      <h1 className="text-5xl font-serif mb-4"></h1>
+                      <p className="text-xl font-sans mb-6 max-w-2xl mx-auto"></p>
+                      <button
+                        className="mx-auto text-white px-8 py-3 rounded-lg font-sans transition-colors"
+                        onClick={showToast}
+                      >
+                        Get Started
+                      </button>
+                    </section>
+                    <Hero />
+                    <AboutUs />
+                    <Properties />
+                    <FeaturedProject />
+                    <Brochures />
+                    <ContactUs />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="/property/:id" element={<PropertyDetails />} />
+            </Routes>
+            <Toaster position="top-right" />
+          </main>
         </div>
       </Router>
     </AuthProvider>
