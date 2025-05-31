@@ -5,11 +5,12 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
 import Properties from './components/Properties';
+import FeaturedProject from './components/FeaturedProject';
+import Brochures from './components/Brochures';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import PropertyDetails from './components/PropertyDetails';
 import AllProperties from './components/AllProperties';
-import FeaturedProject from './components/FeaturedProject';
 import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
                     <AboutUs />
                     <Properties />
                     <FeaturedProject />
+                    <Brochures />
                     <ContactUs />
                     <Footer />
                   </>
