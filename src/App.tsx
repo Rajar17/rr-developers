@@ -24,6 +24,7 @@ import { useEffect } from 'react';
      import VillasIndividualHousesBrochure from './components/VillasIndividualHousesBrochure';
      import TwoThreeBHKBrochure from './components/TwoThreeBHKBrochure';
      import DuplexBrochure from './components/DuplexBrochure';
+     import ErrorBoundary from './components/ErrorBoundary';
      import { AuthProvider } from './contexts/AuthContext';
 
      function App() {
@@ -63,37 +64,39 @@ import { useEffect } from 'react';
              <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
                <Header />
                <main className="pt-[100px] md:pt-[80px]">
-                 <Routes>
-                   <Route
-                     path="/"
-                     element={
-                       <>
-                         <Hero />
-                         <AboutUs />
-                         <Properties />
-                         <FeaturedProject />
-                         <Brochures />
-                         <ContactUs />
-                         <Footer />
-                       </>
-                     }
-                   />
-                   <Route path="/property/:id" element={<PropertyDetails />} />
-                   <Route path="/all-properties" element={<AllProperties />} />
-                   <Route path="/open-sites" element={<OpenSites />} />
-                   <Route path="/villas" element={<Villas />} />
-                   <Route path="/individual-houses" element={<IndividualHouses />} />
-                   <Route path="/2bhk" element={<TwoBHK />} />
-                   <Route path="/3bhk" element={<ThreeBHK />} />
-                   <Route path="/duplex-houses" element={<DuplexHouses />} />
-                   <Route path="/duplex-villas" element={<DuplexVillas />} />
-                   <Route path="/brochures/company-profile" element={<CompanyProfileBrochure />} />
-                   <Route path="/brochures/jetty-mayfair" element={<JettyMayfairBrochure />} />
-                   <Route path="/brochures/open-plots" element={<OpenPlotsBrochure />} />
-                   <Route path="/brochures/villas-individual-houses" element={<VillasIndividualHousesBrochure />} />
-                   <Route path="/brochures/2bhk-3bhk" element={<TwoThreeBHKBrochure />} />
-                   <Route path="/brochures/duplex" element={<DuplexBrochure />} />
-                 </Routes>
+                 <ErrorBoundary>
+                   <Routes>
+                     <Route
+                       path="/"
+                       element={
+                         <>
+                           <Hero />
+                           <AboutUs />
+                           <Properties />
+                           <FeaturedProject />
+                           <Brochures />
+                           <ContactUs />
+                           <Footer />
+                         </>
+                       }
+                     />
+                     <Route path="/property/:id" element={<PropertyDetails />} />
+                     <Route path="/all-properties" element={<AllProperties />} />
+                     <Route path="/open-sites" element={<OpenSites />} />
+                     <Route path="/villas" element={<Villas />} />
+                     <Route path="/individual-houses" element={<IndividualHouses />} />
+                     <Route path="/2bhk" element={<TwoBHK />} />
+                     <Route path="/3bhk" element={<ThreeBHK />} />
+                     <Route path="/duplex-houses" element={<DuplexHouses />} />
+                     <Route path="/duplex-villas" element={<DuplexVillas />} />
+                     <Route path="/brochures/company-profile" element={<CompanyProfileBrochure />} />
+                     <Route path="/brochures/jetty-mayfair" element={<JettyMayfairBrochure />} />
+                     <Route path="/brochures/open-plots" element={<OpenPlotsBrochure />} />
+                     <Route path="/brochures/villas-individual-houses" element={<VillasIndividualHousesBrochure />} />
+                     <Route path="/brochures/2bhk-3bhk" element={<TwoThreeBHKBrochure />} />
+                     <Route path="/brochures/duplex" element={<DuplexBrochure />} />
+                   </Routes>
+                 </ErrorBoundary>
                  <Toaster position="top-right" />
                </main>
              </div>
