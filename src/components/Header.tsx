@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import logo from '../assets/RR-1.jpeg';
 const Header: React.FC = () => {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
