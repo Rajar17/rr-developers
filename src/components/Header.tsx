@@ -13,9 +13,19 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-serif text-blue-975 font-bold">
-          RR Developers
-        </Link>
+        <div className="flex items-center">
+          <img
+            src="https://images.unsplash.com/photo-1628592101752-6db6e8b240e5?q=80&w=2070&auto=format&fit=crop"
+            alt="RR Developers Logo"
+            className="w-12 h-12 mr-2"
+          />
+          <div>
+            <Link to="/" className="text-2xl font-serif text-blue-975 font-bold">
+              RR Developers
+            </Link>
+            <p className="text-sm text-gray-600">Premium Real Estate in Rajahmundry</p>
+          </div>
+        </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-blue-975 focus:outline-none">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,6 +75,36 @@ const Header: React.FC = () => {
           </li>
           <li>
             <a
+              href="/#projects"
+              className={`block py-2 px-4 ${
+                location.hash === '#projects' ? 'text-blue-975 font-semibold' : 'text-gray-700'
+              } hover:text-blue-975 transition-colors`}
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#projects"
+              className={`block py-2 px-4 ${
+                location.hash === '#projects' ? 'text-blue-975 font-semibold' : 'text-gray-700'
+              } hover:text-blue-975 transition-colors`}
+            >
+              New Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#brochures"
+              className={`block py-2 px-4 ${
+                location.hash === '#brochures' ? 'text-blue-975 font-semibold' : 'text-gray-700'
+              } hover:text-blue-975 transition-colors`}
+            >
+              Brochures
+            </a>
+          </li>
+          <li>
+            <a
               href="/#contact-us"
               className={`block py-2 px-4 ${
                 location.hash === '#contact-us' ? 'text-blue-975 font-semibold' : 'text-gray-700'
@@ -72,6 +112,11 @@ const Header: React.FC = () => {
             >
               Contact Us
             </a>
+          </li>
+          <li>
+            <span className="block py-2 px-4 text-gray-700">
+              {COMPANY_INFO.location}
+            </span>
           </li>
           <li>
             <a href={`tel:${COMPANY_INFO.phone}`} className="block py-2 px-4 text-blue-975 font-semibold">
