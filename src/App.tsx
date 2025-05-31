@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Toaster, toast } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast'; // Remove toast import since it's no longer needed
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -26,7 +26,7 @@ function App() {
       if (!targetElement) return;
 
       window.scrollTo({
-        top: targetElement.getBoundingClientRect().top + window.scrollY - 100, // Adjusted for header height
+        top: targetElement.getBoundingClientRect().top + window.scrollY - 100,
         behavior: 'smooth',
       });
     };
@@ -43,14 +43,6 @@ function App() {
     };
   }, []);
 
-  const showToast = () => {
-    toast.success('Welcome to RR Developers!', {
-      style: {
-        fontFamily: 'sans-serif',
-      },
-    });
-  };
-
   return (
     <AuthProvider>
       <Router>
@@ -62,16 +54,6 @@ function App() {
                 path="/"
                 element={
                   <>
-                    <section className="text-center mt-4 mb-16 animate-fadeIn">
-                      <h1 className="text-5xl font-serif mb-4"></h1>
-                      <p className="text-xl font-sans mb-6 max-w-2xl mx-auto"></p>
-                      <button
-                        className="mx-auto text-white px-8 py-3 rounded-lg font-sans transition-colors"
-                        onClick={showToast}
-                      >
-                        Get Started
-                      </button>
-                    </section>
                     <Hero />
                     <AboutUs />
                     <Properties />
