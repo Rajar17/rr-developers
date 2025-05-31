@@ -129,4 +129,4 @@ export const BROCHURES: Brochure[] = [
     description: 'Explore our collection of luxury villas and individual houses',
     thumbnail: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg',
   },
-];
+];      
