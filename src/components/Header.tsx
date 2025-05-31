@@ -65,16 +65,6 @@ const Header: React.FC = () => {
           </li>
           <li>
             <a
-              href="/#brochures"
-              className={`block py-2 px-4 ${
-                location.hash === '#brochures' ? 'text-blue-975 font-semibold' : 'text-gray-700'
-              } hover:text-blue-975 transition-colors`}
-            >
-              Brochures
-            </a>
-          </li>
-          <li>
-            <a
               href="/#contact-us"
               className={`block py-2 px-4 ${
                 location.hash === '#contact-us' ? 'text-blue-975 font-semibold' : 'text-gray-700'
