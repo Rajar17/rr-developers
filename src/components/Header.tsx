@@ -15,11 +15,11 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <img
-            src="https://via.placeholder.com/48?text=Logo"
-            alt="RR Developers Logo"
-            className="w-12 h-12 mr-2"
-            onError={(e) => (e.currentTarget.src = '/assets/placeholder.jpg')}
-          />
+               src="/assets/logo.jpeg"
+               alt="RR Developers Logo"
+               className="w-12 h-12 mr-2"
+               onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/48?text=Logo')}
+            />
           <div>
             <Link to="/" className="text-2xl font-serif text-blue-975 font-bold">
               RR Developers
