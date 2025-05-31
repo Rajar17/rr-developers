@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsScrolledDown(true);
-      } else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY <= 50 || currentScrollY < lastScrollY) {
         setIsScrolledDown(false);
       }
 
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 transform ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 transform ${
         isScrolledDown ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
