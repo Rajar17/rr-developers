@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/RR-1.jpeg';
 
 const Header: React.FC = () => {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
@@ -12,7 +11,7 @@ const Header: React.FC = () => {
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsScrolledDown(true);
-      } else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY <= 50 || currentScrollY < lastScrollY) {
         setIsScrolledDown(false);
       }
 
@@ -25,7 +24,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 transform ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 transform ${
         isScrolledDown ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
@@ -46,7 +45,7 @@ const Header: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <img
-                  src={logo}
+                  src="/RR-1.jpeg"
                   alt="RR Developers Logo"
                   className="h-10 w-10 object-contain rounded-full border border-blue-975"
                 />
