@@ -15,11 +15,17 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <img
-               src="/assets/logo.jpeg"
-               alt="RR Developers Logo"
-               className="w-12 h-12 mr-2"
-               onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/48?text=Logo')}
-            />
+  src="/assets/logo.jpeg"
+  alt="RR Developers Logo"
+  className="w-12 h-12 mr-2 rounded-full"
+  onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/48?text=Logo')}
+/>
+          <img
+            src="https://placehold.co/48x48?text=Logo"
+            alt="RR Developers Logo"
+            className="w-12 h-12 mr-2 rounded-full"
+            onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/48?text=Logo')}
+          />
           <div>
             <Link to="/" className="text-2xl font-serif text-blue-975 font-bold">
               RR Developers
@@ -47,7 +53,7 @@ const Header: React.FC = () => {
           <li>
             <Link
               to="/"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.pathname === '/' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -57,7 +63,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="/#about-us"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.hash === '#about-us' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -67,7 +73,7 @@ const Header: React.FC = () => {
           <li>
             <Link
               to="/all-properties"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.pathname === '/all-properties' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -77,7 +83,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="/#projects"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.hash === '#projects' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -87,7 +93,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="/#projects"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.hash === '#projects' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -97,7 +103,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="/#brochures"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.hash === '#brochures' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -107,7 +113,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="/#contact-us"
-              className={`block py-2 px-4 text-base ${
+              className={`block py-2 px-4 text-sm ${
                 location.hash === '#contact-us' ? 'text-blue-975 font-semibold' : 'text-gray-700'
               } hover:text-blue-975 transition-colors`}
             >
@@ -115,12 +121,12 @@ const Header: React.FC = () => {
             </a>
           </li>
           <li>
-            <span className="block py-2 px-4 text-base text-gray-700">
+            <span className="block py-2 px-4 text-sm text-gray-700">
               {COMPANY_INFO.location}
             </span>
           </li>
           <li>
-            <a href={`tel:${COMPANY_INFO.phone}`} className="block py-2 px-4 text-base text-blue-975 font-semibold">
+            <a href={`tel:${COMPANY_INFO.phone}`} className="block py-2 px-4 text-sm text-blue-975 font-semibold">
               {COMPANY_INFO.phone}
             </a>
           </li>
