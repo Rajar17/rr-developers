@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-     import { Link } from 'react-router-dom'; // Import Link for navigation
+     import { Link } from 'react-router-dom';
      import logo from '../assets/RR-1.jpeg';
 
      const Header: React.FC = () => {
        const [isScrolledDown, setIsScrolledDown] = useState(false);
        const [lastScrollY, setLastScrollY] = useState(0);
        const [isMenuOpen, setIsMenuOpen] = useState(false);
+       const [isPropertiesOpen, setIsPropertiesOpen] = useState(false);
+       const [isBrochuresOpen, setIsBrochuresOpen] = useState(false);
 
        useEffect(() => {
          const handleScroll = () => {
@@ -94,10 +96,95 @@ import React, { useState, useEffect } from 'react';
                          Home
                        </Link>
                      </li>
-                     <li>
-                       <Link to="/properties" className="hover:text-blue-700 transition-colors">
+                     {/* Properties Dropdown */}
+                     <li className="relative">
+                       <button
+                         className="hover:text-blue-700 transition-colors flex items-center"
+                         onClick={() => setIsPropertiesOpen(!isPropertiesOpen)}
+                       >
                          Properties
-                       </Link>
+                         <svg
+                           className="w-4 h-4 ml-1"
+                           fill="none"
+                           stroke="currentColor"
+                           viewBox="0 0 24 24"
+                           xmlns="http://www.w3.org/2000/svg"
+                         >
+                           <path
+                             strokeLinecap="round"
+                             strokeLinejoin="round"
+                             strokeWidth="2"
+                             d="M19 9l-7 7-7-7"
+                           />
+                         </svg>
+                       </button>
+                       {isPropertiesOpen && (
+                         <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 w-48 md:w-56 z-50">
+                           <li>
+                             <Link
+                               to="/open-sites"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               Open Sites
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/villas"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               Villas
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/individual-houses"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               Individual Houses
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/2bhk"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               2BHK
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/3bhk"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               3BHK
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/duplex-houses"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               Duplex Houses
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/duplex-villas"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsPropertiesOpen(false)}
+                             >
+                               Duplex Villas
+                             </Link>
+                           </li>
+                         </ul>
+                       )}
                      </li>
                      <li>
                        <Link to="/all-properties" className="hover:text-blue-700 transition-colors">
@@ -114,10 +201,86 @@ import React, { useState, useEffect } from 'react';
                          Contact
                        </a>
                      </li>
-                     <li>
-                       <a href="#brochures" className="hover:text-blue-700 transition-colors">
+                     {/* Brochures Dropdown */}
+                     <li className="relative">
+                       <button
+                         className="hover:text-blue-700 transition-colors flex items-center"
+                         onClick={() => setIsBrochuresOpen(!isBrochuresOpen)}
+                       >
                          Brochures
-                       </a>
+                         <svg
+                           className="w-4 h-4 ml-1"
+                           fill="none"
+                           stroke="currentColor"
+                           viewBox="0 0 24 24"
+                           xmlns="http://www.w3.org/2000/svg"
+                         >
+                           <path
+                             strokeLinecap="round"
+                             strokeLinejoin="round"
+                             strokeWidth="2"
+                             d="M19 9l-7 7-7-7"
+                           />
+                         </svg>
+                       </button>
+                       {isBrochuresOpen && (
+                         <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 w-64 md:w-72 z-50">
+                           <li>
+                             <Link
+                               to="/brochures/company-profile"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsBrochuresOpen(false)}
+                             >
+                               RR Developers Company Profile
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/brochures/jetty-mayfair"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsBrochuresOpen(false)}
+                             >
+                               Jetty Mayfair Brochure
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/brochures/open-plots"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsBrochuresOpen(false)}
+                             >
+                               Open Plots Catalog
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/brochures/villas-individual-houses"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsBrochuresOpen(false)}
+                             >
+                               Villas and Individual Houses
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/brochures/2bhk-3bhk"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsBrochuresOpen(false)}
+                             >
+                               2BHK and 3BHK Apartments
+                             </Link>
+                           </li>
+                           <li>
+                             <Link
+                               to="/brochures/duplex"
+                               className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                               onClick={() => setIsBrochuresOpen(false)}
+                             >
+                               Duplex Houses and Villas
+                             </Link>
+                           </li>
+                         </ul>
+                       )}
                      </li>
                      <li>
                        <a href="#projects" className="hover:text-blue-700 transition-colors">
