@@ -1,7 +1,15 @@
 import React from 'react';
-import { BROCHURES } from '../utils/constants';
 
 const Brochures: React.FC = () => {
+  const brochures = [
+    {
+      id: '1',
+      title: 'RR Developers Company Profile',
+      description: 'Learn about our company history, vision, and achievements',
+      thumbnail: 'https://images.unsplash.com/photo-2884866?q=80&w=2070&auto=format&fit=crop',
+    },
+  ];
+
   return (
     <section id="brochures" className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
@@ -9,7 +17,7 @@ const Brochures: React.FC = () => {
           Our Brochures
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {(BROCHURES || []).map(brochure => (
+          {brochures.map(brochure => (
             <div key={brochure.id} className="bg-white p-6 rounded-lg shadow-md">
               <img
                 src={brochure.thumbnail || '/assets/placeholder.jpg'}
