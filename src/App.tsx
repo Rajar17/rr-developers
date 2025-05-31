@@ -9,6 +9,7 @@ import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import PropertyDetails from './components/PropertyDetails';
 import AllProperties from './components/AllProperties';
+import FeaturedProject from './components/FeaturedProject';
 import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
                     <Hero />
                     <AboutUs />
                     <Properties />
+                    <FeaturedProject />
                     <ContactUs />
                     <Footer />
                   </>
