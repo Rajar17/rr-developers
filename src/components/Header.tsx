@@ -118,11 +118,6 @@ const Header: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="hover:text-blue-700 transition-colors">
-                    Projects
-                  </a>
-                </li>
-                <li>
                   <a href="#new-projects" className="hover:text-blue-700 transition-colors">
                     New Projects
                   </a>
