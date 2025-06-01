@@ -112,14 +112,14 @@ const Header: React.FC = () => {
                     RR Developers
                   </Link>
                   <p className="text-sm text-blue-975">
-                    Premium Real Estate in Rajahmundry
+                    Discover Premium Real Estate in Rajahmundry
                   </p>
                 </div>
               </div>
               {/* Hamburger Menu Button (Visible on Mobile) */}
               <button
                 className="md:hidden text-blue-975 focus:outline-none"
-                onClick={toggleMenu}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <svg
                   className="w-6 h-6"
