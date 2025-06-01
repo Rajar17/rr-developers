@@ -93,32 +93,32 @@ const Header: React.FC = () => {
               {/* Navigation Links */}
               <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-blue-975">
                 <li>
-                  <a href="#home" className="hover:text-blue-700 transition-colors">
+                  <a href="#home" className="hover:text-blue-600 transition-colors">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#properties" className="hover:text-blue-700 transition-colors">
+                  <a href="#properties" className="hover:text-blue-600 transition-colors">
                     Properties
                   </a>
                 </li>
                 <li>
-                  <a href="#location" className="hover:text-blue-700 transition-colors">
+                  <a href="#location" className="hover:text-blue-600 transition-colors">
                     Location
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-blue-700 transition-colors">
+                  <a href="#contact" className="hover:text-blue-600 transition-colors">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a href="#brochures" className="hover:text-blue-700 transition-colors">
+                  <a href="#brochures" className="hover:text-blue-600 transition-colors">
                     Brochures
                   </a>
                 </li>
                 <li>
-                  <a href="#new-projects" className="hover:text-blue-700 transition-colors">
+                  <a href="#new-projects" className="hover:text-blue-600 transition-colors">
                     New Projects
                   </a>
                 </li>
