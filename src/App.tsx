@@ -3,7 +3,6 @@ import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
-import NewLaunch from './components/NewLaunch';
 import Properties from './components/Properties';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
@@ -47,7 +46,6 @@ function App() {
         <main className="pt-[100px] md:pt-[80px]">
           <Hero id="home" />
           <AboutUs id="about-us" />
-           <NewLaunch id="new-launch" />
           <Properties id="properties" />
           <ContactUs id="contact" />
           <Footer />
