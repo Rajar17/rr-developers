@@ -91,7 +91,7 @@ const Header: React.FC = () => {
               </div>
 
               {/* Navigation Links */}
-              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-875 text-sm">
+              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-975 text-sm">
                 <li>
                   <a href="#home" className="hover:text-blue-700 transition-colors">
                     Home
@@ -112,18 +112,14 @@ const Header: React.FC = () => {
                     Contact
                   </a>
                 </li>
-                <li>
-                  <a href="#brochures" className="hover:text-blue-700 transition-colors">
-                    Brochures
-                  </a>
-                </li>
+              
                 <li>
                   <a href="#new-projects" className="hover:text-blue-700 transition-colors whitespace-nowrap">
                     New Projects
                   </a>
                 </li>
                 {/* Company Info (Desktop Only) */}
-                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-500 text-xs">
+                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-600 text-xs">
                   <span>📞 {COMPANY_INFO.phone}</span>
                   <span>✉️ {COMPANY_INFO.email}</span>
                   <span>📍 {COMPANY_INFO.location}</span>
