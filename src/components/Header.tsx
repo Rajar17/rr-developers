@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/RR-1.jpeg';
+import { COMPANY_INFO } from '../utils/constants';
 
 const Header: React.FC = () => {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
@@ -38,9 +39,9 @@ const Header: React.FC = () => {
           {/* Contact Information (Top Row) */}
           <div className="flex justify-end mb-2">
             <div className="flex flex-col md:flex-row md:space-x-4 space-y-1 md:space-y-0 text-xs md:text-sm text-gray-600 text-right">
-              <span>📞 +91-9100677906</span>
-              <span>✉️ rrdevelopers23@gmail.com</span>
-              <span>📍 Rajahmundry, Andhra Pradesh</span>
+              <span>📞 {COMPANY_INFO.phone}</span>
+              <span>✉️ {COMPANY_INFO.email}</span>
+              <span>📍 {COMPANY_INFO.location}</span>
             </div>
           </div>
 
