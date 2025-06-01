@@ -112,10 +112,9 @@ const Header: React.FC = () => {
                     Contact
                   </a>
                 </li>
-              
                 <li>
-                  <a href="#new-projects" className="hover:text-blue-700 transition-colors whitespace-nowrap">
-                    New Projects
+                  <a href="#new-launch" className="hover:text-blue-700 transition-colors whitespace-nowrap">
+                    New Launch
                   </a>
                 </li>
                 {/* Company Info (Desktop Only) */}
