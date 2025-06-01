@@ -35,7 +35,7 @@ const Header: React.FC = () => {
       }`}
     >
       <nav className="bg-white/90 backdrop-blur-md">
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-4 py-2">
           {/* Main Row: Logo, Title, and Navigation */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             {/* Logo and Title */}
@@ -79,51 +79,51 @@ const Header: React.FC = () => {
 
             {/* Navigation Links and Company Info */}
             <div
-              className={`md:flex md:items-center mt-4 md:mt-0 ${
+              className={`md:flex md:items-center mt-2 md:mt-0 ${
                 isMenuOpen ? 'block' : 'hidden'
               }`}
             >
               {/* Company Info (Mobile Only) */}
-              <div className="md:hidden flex flex-col space-y-1 text-xs text-gray-600 mb-4">
+              <div className="md:hidden flex flex-col space-y-0.5 text-[10px] text-gray-600 mb-2">
                 <span>📞 {COMPANY_INFO.phone}</span>
                 <span>✉️ {COMPANY_INFO.email}</span>
                 <span>📍 {COMPANY_INFO.location}</span>
               </div>
 
               {/* Navigation Links */}
-              <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-blue-975">
+              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-975 text-sm">
                 <li>
-                  <a href="#home" className="hover:text-blue-600 transition-colors">
+                  <a href="#home" className="hover:text-blue-700 transition-colors">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#properties" className="hover:text-blue-600 transition-colors">
+                  <a href="#properties" className="hover:text-blue-700 transition-colors">
                     Properties
                   </a>
                 </li>
                 <li>
-                  <a href="#location" className="hover:text-blue-600 transition-colors">
+                  <a href="#location" className="hover:text-blue-700 transition-colors">
                     Location
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-blue-600 transition-colors">
+                  <a href="#contact" className="hover:text-blue-700 transition-colors">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a href="#brochures" className="hover:text-blue-600 transition-colors">
+                  <a href="#brochures" className="hover:text-blue-700 transition-colors">
                     Brochures
                   </a>
                 </li>
                 <li>
-                  <a href="#new-projects" className="hover:text-blue-600 transition-colors">
+                  <a href="#new-projects" className="hover:text-blue-700 transition-colors whitespace-nowrap">
                     New Projects
                   </a>
                 </li>
                 {/* Company Info (Desktop Only) */}
-                <li className="hidden md:flex md:items-center md:space-x-2 text-gray-600 text-sm">
+                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-600 text-xs">
                   <span>📞 {COMPANY_INFO.phone}</span>
                   <span>✉️ {COMPANY_INFO.email}</span>
                   <span>📍 {COMPANY_INFO.location}</span>
