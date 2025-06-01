@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
 import Properties from './components/Properties';
+import NewLaunch from './components/NewLaunch';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import { AuthProvider } from './contexts/AuthContext';
@@ -46,6 +47,7 @@ function App() {
         <main className="pt-[100px] md:pt-[80px]">
           <Hero id="home" />
           <AboutUs id="about-us" />
+           <NewLaunch id="new-launch" />
           <Properties id="properties" />
           <ContactUs id="contact" />
           <Footer />
