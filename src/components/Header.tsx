@@ -36,15 +36,6 @@ const Header: React.FC = () => {
     >
       <nav className="bg-white/90 backdrop-blur-md">
         <div className="container mx-auto px-4 py-3">
-          {/* Contact Information (Top Row) */}
-          <div className="flex justify-end mb-2">
-            <div className="flex flex-col md:flex-row md:space-x-4 space-y-1 md:space-y-0 text-xs md:text-sm text-gray-600 text-right">
-              <span>📞 {COMPANY_INFO.phone}</span>
-              <span>✉️ {COMPANY_INFO.email}</span>
-              <span>📍 {COMPANY_INFO.location}</span>
-            </div>
-          </div>
-
           {/* Main Row: Logo, Title, and Navigation */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             {/* Logo and Title */}
@@ -86,12 +77,20 @@ const Header: React.FC = () => {
               </button>
             </div>
 
-            {/* Navigation Links */}
+            {/* Navigation Links and Company Info */}
             <div
               className={`md:flex md:items-center mt-4 md:mt-0 ${
                 isMenuOpen ? 'block' : 'hidden'
               }`}
             >
+              {/* Company Info (Mobile Only) */}
+              <div className="md:hidden flex flex-col space-y-1 text-xs text-gray-600 mb-4">
+                <span>📞 {COMPANY_INFO.phone}</span>
+                <span>✉️ {COMPANY_INFO.email}</span>
+                <span>📍 {COMPANY_INFO.location}</span>
+              </div>
+
+              {/* Navigation Links */}
               <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-blue-975">
                 <li>
                   <a href="#home" className="hover:text-blue-700 transition-colors">
@@ -127,6 +126,12 @@ const Header: React.FC = () => {
                   <a href="#new-projects" className="hover:text-blue-700 transition-colors">
                     New Projects
                   </a>
+                </li>
+                {/* Company Info (Desktop Only) */}
+                <li className="hidden md:flex md:items-center md:space-x-2 text-gray-600 text-sm">
+                  <span>📞 {COMPANY_INFO.phone}</span>
+                  <span>✉️ {COMPANY_INFO.email}</span>
+                  <span>📍 {COMPANY_INFO.location}</span>
                 </li>
               </ul>
             </div>
