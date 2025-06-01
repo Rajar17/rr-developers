@@ -1,44 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { COMPANY_INFO } from '../utils/constants';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInfoCircle, FaAddressBook, FaHome, FaBuilding, FaFileAlt, FaTasks, FaPlusCircle } from 'react-icons/fa';
+import logo from '../assets/RR-1.jpeg';
 
 const Header: React.FC = () => {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollTimeout, setScrollTimeout] = useState<NodeJS.Timeout | null>(null);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsScrolledDown(true);
+      } else if (currentScrollY <= 50 || currentScrollY < lastScrollY) {
+        setIsScrolledDown(false);
       }
 
-      const timeout = setTimeout(() => {
-        const currentScrollY = window.scrollY;
-
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          setIsScrolledDown(true);
-        } else if (currentScrollY <= 50 || currentScrollY < lastScrollY) {
-          setIsScrolledDown(false);
-        }
-
-        setLastScrollY(currentScrollY);
-      }, 100); // Debounce delay of 100ms
-
-      setScrollTimeout(timeout);
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-    };
-  }, [lastScrollY, scrollTimeout]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,53 +29,18 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 transform h-[120px] will-change-transform ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 transform ${
         isScrolledDown ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <nav className="bg-white/90 backdrop-blur-md h-full">
+      <nav className="bg-white/90 backdrop-blur-md">
         <div className="container mx-auto px-4 py-3">
-          {/* Contact Information and About Us/Contact Us (Top Row) */}
+          {/* Contact Information (Top Row) */}
           <div className="flex justify-end mb-2">
             <div className="flex flex-col md:flex-row md:space-x-4 space-y-1 md:space-y-0 text-xs md:text-sm text-gray-600 text-right">
-              <div className="flex space-x-4">
-                <a
-                  href="/#about-us"
-                  className={`flex items-center hover:text-blue-975 transition-colors ${
-                    location.hash === '#about-us' ? 'text-blue-975' : 'text-gray-600'
-                  }`}
-                >
-                  <FaInfoCircle className="mr-1 text-blue-975" />
-                  About Us
-                </a>
-                <a
-                  href="/#contact-us"
-                  className={`flex items-center hover:text-blue-975 transition-colors ${
-                    location.hash === '#contact-us' ? 'text-blue-975' : 'text-gray-600'
-                  }`}
-                >
-                  <FaAddressBook className="mr-1 text-blue-975" />
-                  Contact Us
-                </a>
-              </div>
-              <div className="flex flex-col md:flex-row md:space-x-4 space-y-1 md:space-y-0">
-                <span className="flex items-center">
-                  <FaMapMarkerAlt className="mr-1 text-blue-975" />
-                  {COMPANY_INFO.location}
-                </span>
-                <span className="flex items-center">
-                  <FaPhone className="mr-1 text-blue-975" />
-                  <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-blue-975 transition-colors">
-                    {COMPANY_INFO.phone}
-                  </a>
-                </span>
-                <span className="flex items-center">
-                  <FaEnvelope className="mr-1 text-blue-975" />
-                  <a href="mailto:rrdevelopers23@gmail.com" className="hover:text-blue-975 transition-colors">
-                    rrdevelopers23@gmail.com
-                  </a>
-                </span>
-              </div>
+              <span>📞 +91-9100677906</span>
+              <span>✉️ rrdevelopers23@gmail.com</span>
+              <span>📍 Rajahmundry, Andhra Pradesh</span>
             </div>
           </div>
 
@@ -102,15 +50,14 @@ const Header: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <img
-                  src="/assets/RR-1.jpeg"
+                  src={logo}
                   alt="RR Developers Logo"
                   className="h-10 w-10 object-contain rounded-full border border-blue-975"
-                  onError={(e) => (e.currentTarget.src = 'https://placehold.co/48x48?text=Logo')}
                 />
                 <div className="flex flex-col">
-                  <Link to="/" className="text-2xl font-serif text-blue-975 font-bold">
+                  <h1 className="text-2xl font-serif text-blue-975 font-bold">
                     RR Developers
-                  </Link>
+                  </h1>
                   <p className="text-sm text-blue-975">
                     Discover Premium Real Estate in Rajahmundry
                   </p>
@@ -119,7 +66,7 @@ const Header: React.FC = () => {
               {/* Hamburger Menu Button (Visible on Mobile) */}
               <button
                 className="md:hidden text-blue-975 focus:outline-none"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                onClick={toggleMenu}
               >
                 <svg
                   className="w-6 h-6"
@@ -146,57 +93,37 @@ const Header: React.FC = () => {
             >
               <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-blue-975">
                 <li>
-                  <Link
-                    to="/"
-                    className={`flex items-center hover:text-blue-700 transition-colors ${
-                      location.pathname === '/' ? 'text-blue-975' : ''
-                    }`}
-                  >
-                    <FaHome className="mr-1 text-blue-975" />
+                  <a href="#home" className="hover:text-blue-700 transition-colors">
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/all-properties"
-                    className={`flex items-center hover:text-blue-700 transition-colors ${
-                      location.pathname === '/all-properties' ? 'text-blue-975' : ''
-                    }`}
-                  >
-                    <FaBuilding className="mr-1 text-blue-975" />
+                  <a href="#properties" className="hover:text-blue-700 transition-colors">
                     Properties
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <a
-                    href="/#brochures"
-                    className={`flex items-center hover:text-blue-700 transition-colors ${
-                      location.hash === '#brochures' ? 'text-blue-975' : ''
-                    }`}
-                  >
-                    <FaFileAlt className="mr-1 text-blue-975" />
+                  <a href="#location" className="hover:text-blue-700 transition-colors">
+                    Location
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-blue-700 transition-colors">
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#brochures" className="hover:text-blue-700 transition-colors">
                     Brochures
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/#projects"
-                    className={`flex items-center hover:text-blue-700 transition-colors ${
-                      location.hash === '#projects' ? 'text-blue-975' : ''
-                    }`}
-                  >
-                    <FaTasks className="mr-1 text-blue-975" />
+                  <a href="#projects" className="hover:text-blue-700 transition-colors">
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/#projects"
-                    className={`flex items-center hover:text-blue-700 transition-colors ${
-                      location.hash === '#projects' ? 'text-blue-975' : ''
-                    }`}
-                  >
-                    <FaPlusCircle className="mr-1 text-blue-975" />
+                  <a href="#new-projects" className="hover:text-blue-700 transition-colors">
                     New Projects
                   </a>
                 </li>
