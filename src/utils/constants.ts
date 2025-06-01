@@ -1,8 +1,8 @@
-import { Property, Brochure } from '../types';
+import { Property } from '../types';
 
 export const COMPANY_INFO = {
-  location: 'Lalacheruvu, Rajahmundry, Andhra Pradesh',
-  phone: '+91 9100677906',
+  location: 'Rajahmundry, Andhra Pradesh',
+  phone: '+91-9100677906',
   email: 'rrdevelopers23@gmail.com',
   yearEstablished: '2010',
 };
@@ -56,6 +56,3 @@ export const PROPERTIES: Property[] = [
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
   },
 ];
-
-// Removed FEATURED_PROJECT since FeaturedProject.tsx is deleted
-// Removed BROCHURES since Brochures section is removed
