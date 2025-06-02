@@ -84,13 +84,13 @@ const Header: React.FC = () => {
               }`}
             >
               {/* Company Info (Mobile Only) */}
-              <div className="md:hidden flex flex-col space-y-0.5 text-[10px] text-gray-680 mb-2">
+              <div className="md:hidden flex flex-col space-y-0.5 text-[10px] text-gray-900 mb-2">
                 <span>📞 {COMPANY_INFO.phone}</span>
                 <span>✉️ {COMPANY_INFO.email}</span>
               </div>
 
               {/* Navigation Links */}
-              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-975 text-sm">
+              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-1175 text-sm">
                 <li>
                   <a href="#home" className="hover:text-blue-700 transition-colors">
                     Home
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
                   </a>
                 </li>
                 {/* Company Info (Desktop Only) */}
-                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-680 text-xs">
+                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-900 text-xs">
                   <span>📞 {COMPANY_INFO.phone}</span>
                   <span>✉️ {COMPANY_INFO.email}</span>
                 </li>
