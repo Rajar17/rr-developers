@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
+         },
+      fontSize: {
+        'nav': '18px', // Custom font size for navigation
       },
     },
   },
