@@ -11,7 +11,7 @@ export default {
         serif: ['Merriweather', 'serif'],
          },
       fontSize: {
-        'nav': '18px', // Custom font size for navigation
+        'nav': '17px', // Custom font size for navigation
       },
     },
   },
