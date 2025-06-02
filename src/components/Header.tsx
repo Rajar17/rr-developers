@@ -84,10 +84,9 @@ const Header: React.FC = () => {
               }`}
             >
               {/* Company Info (Mobile Only) */}
-              <div className="md:hidden flex flex-col space-y-0.5 text-[10px] text-gray-600 mb-2">
+              <div className="md:hidden flex flex-col space-y-0.5 text-[10px] text-gray-680 mb-2">
                 <span>📞 {COMPANY_INFO.phone}</span>
                 <span>✉️ {COMPANY_INFO.email}</span>
-                <span>📍 {COMPANY_INFO.location}</span>
               </div>
 
               {/* Navigation Links */}
@@ -119,10 +118,9 @@ const Header: React.FC = () => {
                   </a>
                 </li>
                 {/* Company Info (Desktop Only) */}
-                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-600 text-xs">
+                <li className="hidden md:flex md:items-center md:space-x-1 text-gray-680 text-xs">
                   <span>📞 {COMPANY_INFO.phone}</span>
                   <span>✉️ {COMPANY_INFO.email}</span>
-                  <span>📍 {COMPANY_INFO.location}</span>
                 </li>
               </ul>
             </div>
