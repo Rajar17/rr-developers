@@ -90,7 +90,7 @@ const Header: React.FC = () => {
               </div>
 
               {/* Navigation Links */}
-              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-975 text-sm">
+              <ul className="flex flex-col md:flex-row gap-3 md:gap-3 text-blue-975 text-nav">
                 <li>
                   <a href="#home" className="hover:text-blue-700 transition-colors">
                     Home
