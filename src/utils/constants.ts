@@ -29,7 +29,7 @@ export const PROPERTIES: Property[] = [
       busStand: '10.5 km to Rajahmundry Bus Stand',
       railwayStation: '12.5 km to Rajahmundry Railway Station',
     },
-    image: 'file:///C:/users/david/Downloads/IMG_3226.JPG',
+    image: 'https://i.pinimg.com/736x/10/60/e5/1060e5a452542826146ce2e6d910fd0b.jpg',
     isFeatured: true,
   },
   {
@@ -57,7 +57,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     id: '3',
-    title: 'Independent House in Bommuru',
+    title: 'Independent House',
     type: 'Individual House',
     price: 6500000,
     area: 1800,
@@ -103,7 +103,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     id: '5',
-    title: 'Cozy Villa in Diwancheruvu',
+    title: 'Cozy Villa',
     type: 'Villa',
     price: 7200000,
     area: 2000,
@@ -168,7 +168,7 @@ export const PROPERTIES: Property[] = [
       busStand: '10.5 km to Rajahmundry Bus Stand',
       railwayStation: '12.5 km to Rajahmundry Railway Station',
     },
-    image: 'https://i.pinimg.com/736x/1f/08/49/1f0849de2729beb6a770d5a402f4649a.jpg,
+    image: 'https://i.pinimg.com/736x/1f/08/49/1f0849de2729beb6a770d5a402f4649a.jpg',
   },
   {
     id: '8',
