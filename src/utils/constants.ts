@@ -29,7 +29,7 @@ export const PROPERTIES: Property[] = [
       busStand: '10.5 km to Rajahmundry Bus Stand',
       railwayStation: '12.5 km to Rajahmundry Railway Station',
     },
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
+    image: 'file:///C:/users/david/Downloads/IMG_3226.JPG',
     isFeatured: true,
   },
   {
