@@ -17,16 +17,16 @@ const Footer: React.FC = () => {
             </div>
             
             <p className="text-blue-200 mb-6 text-sm">
-              {COMPANY_INFO.description || 'Your trusted partner for premium real estate solutions in Rajahmundry.'}
+              {COMPANY_INFO.description || 'From Dream to Reality – Trust Us to Build It.'}
             </p>
             
             <div className="flex space-x-3">
-              <a href="https://facebook.com/rrdevelopers23" target="_blank" rel="noopener noreferrer" className="bg-blue-900 hover:bg-blue-800 p-2 rounded-full transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61576628416875" target="_blank" rel="noopener noreferrer" className="bg-blue-900 hover:bg-blue-800 p-2 rounded-full transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                 </svg>
               </a>
-              <a href="https://instagram.com/rrdevelopers23" target="_blank" rel="noopener noreferrer" className="bg-blue-900 hover:bg-blue-800 p-2 rounded-full transition-colors">
+              <a href="https://www.instagram.com/rrdevelopers2/" target="_blank" rel="noopener noreferrer" className="bg-blue-900 hover:bg-blue-800 p-2 rounded-full transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
             <div className="mt-6">
               <h4 className="font-medium mb-2">Business Hours</h4>
               <p className="text-blue-200 text-sm">
-                {COMPANY_INFO.businessHours}
+                Monday - Sunday: 9:00 AM - 9:30 PM<br />
               </p>
             </div>
           </div>
